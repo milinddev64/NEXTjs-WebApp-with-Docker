@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# This is my [Next.js WebApp with Docker]() project .
+
+<div align="right" style="margin-right: 20px; font-size: 18px;">Author : Milind Murmu</div>
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+Docker should be installed within your system. To install follow the [Docker Installation Docs](https://docs.docker.com/engine/install/)
+
+First, to run the docker build :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+docker build -t milind-nextjs-app-image .
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Second, to start a container out of that image :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+docker run -p 3000:3000 milind-nextjs-app-image
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Lastly, Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Screenshots of This Project
+- Running Docker Web App
+![Running Docker Web App](./screenshots/docker-webapp.png)
+
+- Command to build docker image
+![Running Docker Web App](./screenshots/buildpng.png)
+- Command to run docker container
+![Running Docker Web App](./screenshots/run-image-docker.png)
+- Docker Desktop
+![Running Docker Web App](./screenshots/docker-desktop.png)
+- Docker Desktop Showing the Image Analysis
+![Running Docker Web App](./screenshots/docker-desktop2.png)
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Docker, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Docker Documentation](https://docs.docker.com/) - learn about Docker features and Containerisation.
+- [Learn Docker](https://www.docker.com/101-tutorial/) - an interactive Docker tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
