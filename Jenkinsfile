@@ -10,7 +10,7 @@ pipeline {
             // where your Next.js project resides on your Jenkins agent.
             // For example, if it's in '/var/jenkins/workspace/my-nextjs-app',
             // replace the placeholder accordingly.
-            dir '/path/to/your/project'
+            // dir '/path/to/your/project'
         }
     }
     environment {
