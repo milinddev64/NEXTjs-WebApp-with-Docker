@@ -5,6 +5,12 @@ pipeline {
         docker {
             image 'node:20-alpine'
             args '-p 3000:3000'
+            // Set an absolute path for the working directory
+            // Replace '/path/to/your/project' with the actual absolute path
+            // where your Next.js project resides on your Jenkins agent.
+            // For example, if it's in '/var/jenkins/workspace/my-nextjs-app',
+            // replace the placeholder accordingly.
+            dir '/path/to/your/project'
         }
     }
     environment {
