@@ -50,6 +50,7 @@ Take the GitHub link of that repository.
 Second, login into your Jenkins then create a new item.
 Under that select your project's name and select item type as pipeline. 
 After creating the project you will be sent to the pipeline configurations page.
+![Pipeline Configurations](./screenshots/jenkins-ss/Pipeline%20Configurations.png)
 
 Third, at the bottom of the configurations page you will find a place to write down the pipeline script.
 In my case, I didn't choose pipeline script from SCM rather wrote the script over there itself.
@@ -79,18 +80,19 @@ pipeline {
 Over here I'm using ```bat 'npm start &'``` bat command because this will be a build for windows.
 If in case you are in another Operating System like Linux use sh instead of bat eg. ```sh 'npm start &'```.
 
-Fourth, task it too install the neccessary plugins from the jenkins manage plugins section before building this jenkins pipeline.
-Like in this case :
+![Pipeline Configuration](./screenshots/jenkins-ss/pipeline%20script.png)
+
+Fourth, task it too install the neccessary plugins from the jenkins manage plugins section before building this jenkins pipeline. Like in this case :
 - Node js
 - GitHub
 
 Lastly, click on the build pipeline and wait for it to run.
 - Stage 1: Installing Dependencies
-- ![Installing Dependencies](./screenshots/)
+![Installing Dependencies](./screenshots/jenkins-ss/install%20dependencies.png)
 - Stage 2: Build
-- ![Building Stage](./screenshots/docker-webapp.png)
+![Building Stage](./screenshots/jenkins-ss/build.png)
 - Stage 3: Deploy
-- ![Deployed Stage](./screenshots/docker-webapp.png)
+![Deployed Stage](./screenshots/jenkins-ss/deploy.png)
 - Running the same Web App but this time build and automated with Jenkins.
 ![Running Jenkins Web App](./screenshots/docker-webapp.png)
 
