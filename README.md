@@ -76,3 +76,21 @@ pipeline {
     }
 }
 ```
+Over here I'm using ```bat 'npm start &'``` bat command because this will be a build for windows.
+If in case you are in another Operating System like Linux use sh instead of bat eg. ```sh 'npm start &'```.
+
+Fourth, task it too install the neccessary plugins from the jenkins manage plugins section before building this jenkins pipeline.
+Like in this case :
+- Node js
+- GitHub
+
+Lastly, click on the build pipeline and wait for it to run.
+- Stage 1: Installing Dependencies
+- ![Installing Dependencies](./screenshots/)
+- Stage 2: Build
+- ![Building Stage](./screenshots/docker-webapp.png)
+- Stage 3: Deploy
+- ![Deployed Stage](./screenshots/docker-webapp.png)
+- Running the same Web App but this time build and automated with Jenkins.
+![Running Jenkins Web App](./screenshots/docker-webapp.png)
+
